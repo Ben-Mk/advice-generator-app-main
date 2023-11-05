@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+}
+
+body {
+  background-color: var(--Dark-Blue);
+  font-family: Manrope;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+}
+.advice-container {
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advice-card {
+  background-color: var(--Dark-Grayish-Blue);
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+#advice-no {
+  color: var(--Neon-Green);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#advice-quote::before {
+  content: '"';
+}
+#advice-quote::after {
+  content: '"';
+}
+
+.divider img {
+  margin: 2rem auto;
+}
+
+button {
+  background-color: var(--Neon-Green);
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  cursor: pointer;
+  margin-inline: -1.5rem;
+}
+
+button:hover {
+  filter: drop-shadow(0 0 1rem var(--Neon-Green));
+  transition: filter 0.5s;
+}
+
+@media screen and (max-width: 520px) {
+  .advice-card {
+    max-width: 400px;
+  }
+}
